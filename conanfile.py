@@ -32,7 +32,7 @@ class HelloConan(ConanFile):
         #          % (self.source_folder, cmake.command_line))
         # self.run("cmake --build . %s" % cmake.build_config)
     def requirements(self):
-        self.requires("FMILibrary/2.0.3@aev25/stable")
+        self.requires("AEV_CMAKE/2.0.0@aev25/stable")
 
     def package(self):
         self.copy("*.h", dst="include", src="src")
