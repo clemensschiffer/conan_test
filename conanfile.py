@@ -14,7 +14,8 @@ class HelloConan(ConanFile):
     default_options = "shared=False"
     generators = "cmake"
     exports_sources = "src/*"
-    requires = "FMILibrary/2.0.3@aev25/stable"
+    #requires = "FMILibrary/2.0.3@aev25/stable"
+    requires = "AEV_CMAKE/2.0.0@aev25/stable"
     
 
     #def source(self):
