@@ -14,7 +14,7 @@ class HelloConan(ConanFile):
     default_options = "shared=False"
     generators = "cmake"
     exports_sources = "src/*"
-    #requires = "FMILibrary/2.0.3@aev25/stable"
+    #requires = "FMILibrary/2.0.3@aev25/testing"
     requires = "AEV_CMAKE/2.0.0@aev25/testing"
     
 
@@ -33,6 +33,7 @@ class HelloConan(ConanFile):
         # self.run("cmake --build . %s" % cmake.build_config)
     def requirements(self):
         self.requires("AEV_CMAKE/2.0.0@aev25/testing")
+        self.requires("FMILibrary/2.0.3@aev25/testing")
 
     def package(self):
         self.copy("*.h", dst="include", src="src")
